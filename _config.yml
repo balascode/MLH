@@ -29,19 +29,19 @@ social:
 
 # This is Search Engine Optimization. It'll help your website look better on search.
 seo:
-  title:       "Example Hacks | 5-6 August 2022"
-  description: "This is a sample hackathon website that you can use by following instructions on GitHub."
+  title:       "Code Fest | 28th April 2026"
+  description: "This is Code Fest"
   image:       "https://prime.mlh.io/img/logos/mlh-prime-color.svg"
 
 # Event information.
 event:
-  name:        "Example Hacks"
-  description: "This is a sample hackathon website that you can use by following instructions on GitHub."
-  date:        "5 - 6 August 2022"
-  location:    "Holmdel, NJ, United States"
+  name:        "Code Fest"
+  description: "This is Code Fest"
+  date:        "28th April 2026"
+  location:    "BTH, Karlskrona, Sweden"
 
   trust_badge:
-    year:   "2017"  # season year
+    year:   "2026"  # season year
     region: "eu"    # "na" or "eu"
     color:  "white" # "white", "black", "gray", "red", "blue" or "yellow"
 
@@ -56,9 +56,7 @@ event:
 
   about:
     description: >
-      Example Hacks is a hackathon hosted at The University of Example.
-      This is your opportunity to describe your event, what to expect, where it is & anything unique to your event.
-      Keep it straightforward, don't make it too long.
+      "Code Fest is a hackathon hosted at Blekinge Tekniska Högskola. This is your opportunity to describe your event, what to expect, where it is & anything unique to your event. Keep it straightforward, don’t make it too long."
 
   # Info Sections
   info:
