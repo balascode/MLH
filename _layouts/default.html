@@ -8,9 +8,22 @@
     {{ content }}
 
     <section class="footer">
-      <div class="container text-center">
-        <h1>{{ site.event.name }}</h1>
-        <h3>&copy; 2026 {{ site.event.name }}. Organised by <a href="bthstudent.se">Students at BTH, For Students at BTH</a>.</h3>
+      <div class="container">
+        <div class="footer-card">
+          <div class="footer-brand">
+            <p class="eyebrow">Connect</p>
+            <h1>{{ site.event.name }}</h1>
+            <p class="footer-lead">Questions, partnerships, or media? Reach out anytime.</p>
+          </div>
+          <div class="footer-links">
+            <a class="footer-link" href="mailto:codefest@bthstudent.se">codefest@bthstudent.se</a>
+            <a class="footer-link" href="https://codefest.bthstudent.se">codefest.bthstudent.se</a>
+          </div>
+        </div>
+        <div class="footer-meta">
+          <span>&copy; 2026 {{ site.event.name }}.</span>
+          <span>Organised by <a href="https://bthstudent.se">Students at BTH, For Students at BTH</a>.</span>
+        </div>
       </div>
     </section>
 
