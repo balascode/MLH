@@ -706,30 +706,86 @@ a {
 
 @media(max-width: 992px) {
   .hero .wrapper {
-    padding-top: 18vh;
+    padding-top: 16vh;
   }
 
   .hero .wrapper h1 {
-    font-size: 52px;
+    font-size: 48px;
+  }
+
+  .hero .wrapper h2 {
+    font-size: 24px;
+  }
+
+  .hero {
+    min-height: 92vh;
+  }
+
+  .about {
+    padding: 110px 0;
+  }
+
+  .info {
+    padding: 95px 0;
+  }
+
+  .schedule {
+    padding: 105px 0 115px;
+  }
+
+  .partners {
+    padding: 100px 0 110px;
+  }
+
+  .faq {
+    padding: 100px 0 115px;
   }
 }
 
 @media(max-width: 768px) {
   .hero .wrapper h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .hero .wrapper h2 {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .hero .wrapper h3 {
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 88vh;
   }
 
   .hero .buttons a {
-    font-size: 16px;
-    padding: 12px 32px;
+    font-size: 15px;
+    padding: 12px 28px;
+  }
+
+  .about {
+    padding: 95px 0;
+  }
+
+  .about p {
+    font-size: 18px;
   }
 
   .info .item {
     margin-bottom: 16px;
+  }
+
+  .info .item h1 {
+    font-size: 32px;
+  }
+
+  .info .item p {
+    font-size: 16px;
+  }
+
+  .info .item img {
+    max-width: 180px;
   }
 
   .schedule {
@@ -738,6 +794,10 @@ a {
 
   .schedule-intro h1 {
     font-size: 36px;
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
   }
 
   .partners {
@@ -752,6 +812,18 @@ a {
     font-size: 34px;
   }
 
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-card {
+    min-height: 190px;
+  }
+
+  .faq h1 {
+    font-size: 32px;
+  }
+
   .footer {
     padding: 60px 0 50px;
   }
@@ -764,5 +836,103 @@ a {
   .footer-links {
     width: 100%;
     max-width: 320px;
+  }
+}
+
+@media(max-width: 576px) {
+  .hero .wrapper {
+    padding-top: 14vh;
+  }
+
+  .hero .wrapper h1 {
+    font-size: 30px;
+    padding: 10px 24px;
+  }
+
+  .hero .wrapper h2 {
+    font-size: 18px;
+  }
+
+  .hero .buttons a {
+    width: 100%;
+    max-width: 260px;
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+
+  .about {
+    padding: 85px 0;
+  }
+
+  .info {
+    padding: 80px 0;
+  }
+
+  .schedule {
+    padding: 80px 0 90px;
+  }
+
+  .schedule-time {
+    font-size: 11px;
+  }
+
+  .partners {
+    padding: 80px 0 90px;
+  }
+
+  .faq {
+    padding: 80px 0 90px;
+  }
+
+  .footer-card {
+    padding: 24px 22px;
+  }
+}
+
+@media(max-width: 420px) {
+  .hero .wrapper h1 {
+    font-size: 26px;
+  }
+
+  .hero .wrapper h2 {
+    font-size: 17px;
+  }
+
+  .hero .wrapper h3 {
+    font-size: 12px;
+  }
+
+  .schedule-card {
+    padding: 22px 20px 20px;
+  }
+
+  .partner-card {
+    padding: 20px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .hero .wrapper h1 {
+    font-size: 68px;
+  }
+
+  .hero .wrapper h2 {
+    font-size: 30px;
+  }
+
+  .about p {
+    font-size: 22px;
+  }
+
+  .info .item h1 {
+    font-size: 40px;
+  }
+
+  .schedule-intro h1 {
+    font-size: 46px;
+  }
+
+  .partners-intro h1 {
+    font-size: 48px;
   }
 }
