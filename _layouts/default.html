@@ -29,6 +29,34 @@
 
     <script src="{{ '/js/jquery-1.11.3.js' | prepend: site.baseurl | prepend: site.url }}"></script>
 
+    <script>
+      (function () {
+        function setupTrustBadge() {
+          var badge = document.getElementById('mlh-trust-badge');
+          var hero = document.querySelector('.hero');
+          if (!badge || !hero) {
+            return;
+          }
+
+          function updateBadgeVisibility() {
+            var cutoff = hero.offsetTop + hero.offsetHeight;
+            var shouldHide = window.scrollY > cutoff;
+            badge.classList.toggle('mlh-trust-badge--hidden', shouldHide);
+          }
+
+          updateBadgeVisibility();
+          window.addEventListener('scroll', updateBadgeVisibility, { passive: true });
+          window.addEventListener('resize', updateBadgeVisibility);
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', setupTrustBadge);
+        } else {
+          setupTrustBadge();
+        }
+      })();
+    </script>
+
     {% include analytics/google_analytics.html ga_id=site.tracking.google_analytics %}
   </body>
 </html>
