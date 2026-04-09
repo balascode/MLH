@@ -30,7 +30,7 @@ social:
 # This is Search Engine Optimization. It'll help your website look better on search.
 seo:
   title:       "Code Fest | 28th April 2026"
-  description: "This is Code Fest"
+  description: "Open to ALL students at BTH!"
   image:       "https://prime.mlh.io/img/logos/mlh-prime-color.svg"
 
 # Event information.
@@ -56,42 +56,25 @@ event:
     description: >
       "Code Fest is a 12 hour in-person mini hackathon powered by Major League Hacking (MLH) and sponsored by Google's Gemini."
 
-  # Info Sections
-  info:
-    sections:
-      - image: "images/image1.png"
-        title: "LEARN."
-        description: >
-          We can write something nice with a graphic (as above) to make the event more appealing.
-      - image: "images/image2.png"
-        title: "BUILD."
-        description: >
-          We can write something nice with a graphic (as above) to make the event more appealing.
-      - image: "images/image3.png"
-        title: "SHARE."
-        description: >
-          We can write something nice with a graphic (as above) to make the event more appealing.
-
   # Frequently asked questions.
   faq:
-    - question: "What is a hackathon?"
+    - question: "What is Code Fest?"
       answer: >
-        A hackathon is an invention marathon. Students come together to build cool
-        software & hardware hacks over 24-48 hours. It's [very beginner friendly](https://medium.com/@tfogo/hackathons-are-for-beginners-77a9c9c0e000#.cj21niskl).
+        Code Fest is an invention marathon. Students come together to build cool
+        software & hardware projects over 12 hours. It's [very beginner friendly](https://medium.com/@tfogo/hackathons-are-for-beginners-77a9c9c0e000#.cj21niskl).
     - question: "How much does it cost?"
       answer: >
-        Nothing. Attending a hackathon is free.
+        Nothing. Attending Code Fest is absolutely free.
     - question: "Do I need to be a student to attend?"
       answer: >
-        Yes. Only students who are currently enrolled at a college/university or
-        have graduated within the past 12 months are eligible to attend.
+        No. Anyone can attend, as long as they belong to BTH in some form, whether as students, alumni, staff or faculty.
     - question: "Where is the event?"
       answer: >
-        The event is being hosted at [insert venue location here].
+        The event is being hosted at the computer labs in the H building at BTH, Karlskrona (Datorsalarna H320, H321, H322) The computer labs are located on the same floor as the library's upper floor.
     - question: "What is Major League Hacking?"
       answer: >
         Major League Hacking is [the official student hackathon league](https://mlh.io) in North America & Europe.
-        We work with over 200 Member Events and empower over 70,000 students every year.
+        They work with over 200 Member Events and empower over 70,000 students every year.
     - question: "Is there a code of conduct?"
       answer: >
         Yes there is. We enforce it very strongly. You can [find it here](https://static.mlh.io/docs/mlh-code-of-conduct.pdf).
