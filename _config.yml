@@ -38,7 +38,7 @@ event:
   name:        "Code Fest"
   description: "You don't have to be a coder to attend! All students at BTH are welcome to join us for 12 hours of fun, food and learning."
   date:        "28th April 2026"
-  location:    "BTH, Karlskrona, Sweden"
+  location:    "Datorsalarna (H320,H321,H322) @ BTH"
 
   trust_badge:
     year:   "2026"  # season year
@@ -100,7 +100,7 @@ event:
         No. Anyone can attend, as long as they belong to BTH in some form, whether as students, alumni, staff or faculty.
     - question: "Where is the event?"
       answer: >
-        The event is being hosted at the computer labs in the H building at BTH, Karlskrona (Datorsalarna H320, H321, H322) The computer labs are located on the same floor as the library's upper floor.
+        The event is being hosted at the computer labs in the H building at [BTH, Karlskrona] (https://maps.app.goo.gl/rQgfPUm4MoNRYhCB9) (Datorsalarna H320, H321, H322) The computer labs are located on the same floor as the library's upper floor. 
     - question: "What is Major League Hacking?"
       answer: >
         Major League Hacking is [the official student hackathon league](https://mlh.io) in North America & Europe.
