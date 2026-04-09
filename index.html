@@ -4,7 +4,7 @@ layout: default
 
 {% include hero.html %}
 
-<section class="about">
+<section class="about" id="about">
   <div class="container">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
       {{ site.event.about.description | markdownify }}
@@ -14,26 +14,6 @@ layout: default
 
 <section class="countdown">
   <div class="container">
-    <div class="countdown-card text-center">
-      <p class="eyebrow" id="countdown-status">Code Fest Starts In</p>
-      <h2><time datetime="2026-04-28T08:00:00+02:00">Tuesday, April 28, 2026</time></h2>
-      <p class="countdown-meta">8:00 AM Stockholm time at BTH, Karlskrona</p>
-      <div class="countdown-grid" id="countdown-grid" aria-live="polite">
-        <div class="countdown-item">
-          <span class="countdown-value" id="countdown-days">--</span>
-          <span class="countdown-label">Days</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-value" id="countdown-hours">--</span>
-          <span class="countdown-label">Hours</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-value" id="countdown-minutes">--</span>
-          <span class="countdown-label">Minutes</span>
-        </div>
-      </div>
-    </div>
-
     <div class="countdown-join">
       <div class="countdown-join-intro">
         <p class="eyebrow">Why Join</p>
