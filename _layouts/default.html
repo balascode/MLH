@@ -54,7 +54,7 @@
           var daysEl = document.getElementById('countdown-days');
           var hoursEl = document.getElementById('countdown-hours');
           var minutesEl = document.getElementById('countdown-minutes');
-          if (!statusEl || !daysEl || !hoursEl || !minutesEl) {
+          if (!daysEl || !hoursEl || !minutesEl) {
             return;
           }
 
@@ -65,7 +65,9 @@
             var now = Date.now();
             var diffMs = target - now;
             if (diffMs <= 0) {
-              statusEl.textContent = 'Code Fest Is Live';
+              if (statusEl) {
+                statusEl.textContent = 'Code Fest Is Live';
+              }
               daysEl.textContent = '0';
               hoursEl.textContent = '0';
               minutesEl.textContent = '0';
@@ -77,7 +79,9 @@
             var hours = Math.floor((totalMinutes % 1440) / 60);
             var minutes = totalMinutes % 60;
 
-            statusEl.textContent = 'Code Fest Starts In';
+            if (statusEl) {
+              statusEl.textContent = 'Code Fest Starts In';
+            }
             daysEl.textContent = String(days);
             hoursEl.textContent = String(hours);
             minutesEl.textContent = String(minutes);

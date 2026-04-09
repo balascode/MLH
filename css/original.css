@@ -234,6 +234,12 @@ a {
   box-shadow: 0 18px 42px rgba(3, 14, 9, 0.24);
 }
 
+@media(min-width: 993px) {
+  .hero-countdown {
+    margin-top: 40px;
+  }
+}
+
 .hero-scroll {
   width: 56px;
   height: 56px;
