@@ -237,11 +237,15 @@ layout: default
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2">
         {% for item in site.event.faq %}
-        <div class="question col-xs-12 col-sm-12">
-          <h2>{{ item.question }}</h2>
-          <hr>
-          {{ item.answer | markdownify }}
-        </div>
+        <details class="question col-xs-12 col-sm-12">
+          <summary>
+            <span class="faq-question">{{ item.question }}</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer">
+            {{ item.answer | markdownify }}
+          </div>
+        </details>
         {% endfor %}
       </div>
     </div>
