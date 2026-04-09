@@ -1339,7 +1339,15 @@ a {
   }
 
   .about {
-    padding: 20px 16px 24px;
+    padding: 110px 0;
+  }
+
+  .countdown {
+    padding: 0 0 56px;
+  }
+
+  .countdown-card h2 {
+    font-size: 26px;
   }
 
   .info {
@@ -1347,35 +1355,11 @@ a {
   }
 
   .schedule {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    padding: 105px 0 115px;
   }
 
   .themes {
-    min-height: 145px;
-    padding: 14px 10px;
-  }
-
-  .partners-group-header h2 {
-    font-size: 24px;
-  }
-
-  .partners-group-header p {
-    margin-bottom: 14px;
-    font-size: 14px;
-  }
-
-  .partner-logo {
-    min-height: 56px;
-  }
-
-  .partner-logo img {
-    max-height: 38px;
-    max-width: 105px;
-  }
-
-  .partner-card h3 {
-    font-size: 15px;
+    padding: 105px 0 115px;
   }
 
   .judges-mentors {
@@ -1387,7 +1371,7 @@ a {
   }
 
   .faq {
-    padding: 100px 0 115px;
+    padding: 96px 0 104px;
   }
 }
 
@@ -1421,6 +1405,27 @@ a {
     font-size: 18px;
   }
 
+  .countdown {
+    padding: 0 0 48px;
+  }
+
+  .countdown-card {
+    padding: 18px 14px;
+  }
+
+  .countdown-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .countdown-grid {
+    gap: 8px;
+  }
+
+  .countdown-value {
+    font-size: 28px;
+  }
+
   .info .item {
     margin-bottom: 16px;
   }
@@ -1441,8 +1446,29 @@ a {
     padding: 90px 0 100px;
   }
 
+  .schedule-intro h1 {
+    font-size: 36px;
+  }
+
+  .schedule-row {
+    grid-template-columns: 132px 1fr;
+  }
+
+  .schedule-cell {
+    padding: 9px 10px;
+    font-size: 14px;
+  }
+
   .themes {
     padding: 90px 0 100px;
+  }
+
+  .themes-intro h1 {
+    font-size: 34px;
+  }
+
+  .themes-grid {
+    grid-template-columns: 1fr;
   }
 
   .judges-mentors {
@@ -1454,22 +1480,6 @@ a {
   }
 
   .judges-mentors-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .themes-intro h1 {
-    font-size: 34px;
-  }
-
-  .themes-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .schedule-intro h1 {
-    font-size: 36px;
-  }
-
-  .schedule-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1517,8 +1527,25 @@ a {
     font-size: 15px;
   }
 
+  .faq {
+    padding: 84px 0 92px;
+  }
+
   .faq h1 {
     font-size: 32px;
+  }
+
+  .faq .question {
+    padding: 12px 12px 10px;
+    margin-bottom: 8px;
+  }
+
+  .faq .question .faq-question {
+    font-size: 16px;
+  }
+
+  .faq .faq-answer p {
+    font-size: 14px;
   }
 
   .footer {
@@ -1561,12 +1588,41 @@ a {
     padding: 85px 0;
   }
 
+  .countdown {
+    padding: 0 0 38px;
+  }
+
+  .countdown-card h2 {
+    font-size: 18px;
+  }
+
+  .countdown-item {
+    padding: 9px 6px;
+  }
+
+  .countdown-value {
+    font-size: 24px;
+  }
+
+  .countdown-label {
+    font-size: 10px;
+  }
+
   .info {
     padding: 80px 0;
   }
 
   .schedule {
     padding: 80px 0 90px;
+  }
+
+  .schedule-row {
+    grid-template-columns: 104px 1fr;
+  }
+
+  .schedule-cell {
+    padding: 8px 8px;
+    font-size: 13px;
   }
 
   .themes {
@@ -1599,10 +1655,6 @@ a {
 
   .theme-card p {
     font-size: 15px;
-  }
-
-  .schedule-time {
-    font-size: 11px;
   }
 
   .partners {
@@ -1644,7 +1696,21 @@ a {
   }
 
   .faq {
-    padding: 80px 0 90px;
+    padding: 70px 0 80px;
+  }
+
+  .faq .question {
+    padding: 10px 10px 8px;
+    margin-bottom: 7px;
+  }
+
+  .faq .question .faq-question {
+    font-size: 15px;
+  }
+
+  .faq .faq-answer p {
+    font-size: 13px;
+    line-height: 1.45em;
   }
 
   .footer-card {
@@ -1665,8 +1731,16 @@ a {
     font-size: 12px;
   }
 
-  .schedule-card {
-    padding: 22px 20px 20px;
+  .countdown-value {
+    font-size: 20px;
+  }
+
+  .schedule-row {
+    grid-template-columns: 92px 1fr;
+  }
+
+  .schedule-cell {
+    font-size: 12px;
   }
 
   .theme-card {
