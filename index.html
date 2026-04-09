@@ -33,6 +33,30 @@ layout: default
         </div>
       </div>
     </div>
+
+    <div class="countdown-join">
+      <div class="countdown-join-intro">
+        <p class="eyebrow">Why Join</p>
+        <p class="countdown-join-copy">A few quick reasons Code Fest is worth your day.</p>
+      </div>
+      <div class="countdown-join-grid">
+        <article class="countdown-join-card">
+          <span class="countdown-join-value">12h</span>
+          <h3>Build Sprint</h3>
+          <p>Beginner-friendly workshops help you get started fast and keep momentum.</p>
+        </article>
+        <article class="countdown-join-card">
+          <span class="countdown-join-value">Free</span>
+          <h3>Food + Swag</h3>
+          <p>Free food, prizes, and a full day of community energy are built in.</p>
+        </article>
+        <article class="countdown-join-card">
+          <span class="countdown-join-value">Open</span>
+          <h3>Support On Site</h3>
+          <p>Mentors, judges, and computer labs are ready if you need extra help.</p>
+        </article>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -99,44 +123,74 @@ layout: default
         </thead>
         <tbody>
           <tr>
-            <td>8:00 AM</td>
-            <td>Check-in + slides presentation</td>
+            <th scope="row"><span class="schedule-time-text">8:00 AM</span></th>
+            <td>
+              <span class="schedule-event">Check-in</span>
+              <span class="schedule-note">Welcome slides</span>
+            </td>
           </tr>
           <tr>
-            <td>8:30 AM</td>
-            <td>Problem statements announced</td>
+            <th scope="row"><span class="schedule-time-text">8:30 AM</span></th>
+            <td>
+              <span class="schedule-event">Problem statements</span>
+              <span class="schedule-note">Challenge reveal</span>
+            </td>
           </tr>
           <tr>
-            <td>8:40 - 9:15 AM</td>
-            <td>Starter workshop</td>
+            <th scope="row"><span class="schedule-time-text">8:40-9:15 AM</span></th>
+            <td>
+              <span class="schedule-event">Starter workshop</span>
+              <span class="schedule-note">Beginner setup session</span>
+            </td>
           </tr>
           <tr>
-            <td>9:30 AM</td>
-            <td>Food + brainstorming</td>
+            <th scope="row"><span class="schedule-time-text">9:30 AM</span></th>
+            <td>
+              <span class="schedule-event">Food break</span>
+              <span class="schedule-note">Team brainstorming</span>
+            </td>
           </tr>
           <tr>
-            <td>10:30 AM</td>
-            <td>Coding + mentor check-ins</td>
+            <th scope="row"><span class="schedule-time-text">10:30 AM</span></th>
+            <td>
+              <span class="schedule-event">Hacking time</span>
+              <span class="schedule-note">Mentor check-ins</span>
+            </td>
           </tr>
           <tr>
-            <td>1:00 PM</td>
-            <td>Judging round 1</td>
+            <th scope="row"><span class="schedule-time-text">1:00 PM</span></th>
+            <td>
+              <span class="schedule-event">Judging round 1</span>
+              <span class="schedule-note">Midpoint reviews</span>
+            </td>
           </tr>
           <tr>
-            <td>2:00 PM</td>
-            <td>Coding + food</td>
+            <th scope="row"><span class="schedule-time-text">2:00 PM</span></th>
+            <td>
+              <span class="schedule-event">Hacking time</span>
+              <span class="schedule-note">Food refill</span>
+            </td>
           </tr>
           <tr>
-            <td>3:00 PM</td>
-            <td>Mini games</td>
+            <th scope="row"><span class="schedule-time-text">3:00 PM</span></th>
+            <td>
+              <span class="schedule-event">Mini games</span>
+              <span class="schedule-note">Stretch break</span>
+            </td>
           </tr>
           <tr>
-            <td>6:30 PM</td>
-            <td>Wrap up</td>
+            <th scope="row"><span class="schedule-time-text">6:30 PM</span></th>
+            <td>
+              <span class="schedule-event">Wrap up</span>
+              <span class="schedule-note">Final submissions</span>
+            </td>
           </tr>
           <tr>
-            <td>8:00 PM</td>
-            <td>Judging + awards</td>
+            <th scope="row"><span class="schedule-time-text">8:00 PM</span></th>
+            <td>
+              <span class="schedule-event">Judging + awards</span>
+              <span class="schedule-note">Closing ceremony</span>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -180,7 +234,7 @@ layout: default
         <div class="partner-badge">Organizer</div>
         <div class="partner-logo">
           <a href="https://root.bthstudent.se">
-            <img src="images/image4.jpeg" alt="#Root" />
+            <img src="images/image4.png" alt="#Root" />
           </a>
         </div>
         <h3>#Root</h3>
@@ -191,7 +245,7 @@ layout: default
         <div class="partner-badge">Organizer</div>
         <div class="partner-logo">
           <a href="https://bits.bthstudent.se">
-            <img src="images/image5.jpeg" alt="BITS" />
+            <img src="images/image5.png" alt="BITS" />
           </a>
         </div>
         <h3>BITS</h3>
@@ -224,7 +278,7 @@ layout: default
     <div class="judges-intro text-center">
       <p class="eyebrow">Leadership</p>
       <h1>Judges &amp; Mentors</h1>
-      <p class="lead">Industry leaders and experienced builders guiding teams from first idea to final demo.</p>
+      <p class="lead">Builders helping teams sharpen ideas, ship stronger demos, and finish well.</p>
     </div>
 
     <div class="judges-mentors-grid">
@@ -233,7 +287,7 @@ layout: default
         <div class="jm-avatar" aria-hidden="true">AR</div>
         <h3>Alex Reynolds</h3>
         <p class="jm-title">Robotics Systems Lead</p>
-        <p>Evaluates technical depth, feasibility, and real-world integration in hardware projects.</p>
+        <p class="jm-summary">Technical depth, feasibility, and real-world robotics.</p>
       </article>
 
       <article class="jm-card jm-card--judge">
@@ -241,7 +295,7 @@ layout: default
         <div class="jm-avatar" aria-hidden="true">NE</div>
         <h3>Nora Eriksson</h3>
         <p class="jm-title">Creative Technology Director</p>
-        <p>Focuses on storytelling quality, design originality, and cultural relevance in prototypes.</p>
+        <p class="jm-summary">Storytelling, originality, and creative execution.</p>
       </article>
 
       <article class="jm-card jm-card--mentor">
@@ -249,7 +303,7 @@ layout: default
         <div class="jm-avatar" aria-hidden="true">DK</div>
         <h3>Daniel Kim</h3>
         <p class="jm-title">AI Product Engineer</p>
-        <p>Helps teams shape AI workflows, improve model quality, and ship dependable automation.</p>
+        <p class="jm-summary">AI workflows, model quality, and dependable automation.</p>
       </article>
 
       <article class="jm-card jm-card--mentor">
@@ -257,7 +311,7 @@ layout: default
         <div class="jm-avatar" aria-hidden="true">SF</div>
         <h3>Sofia Lind</h3>
         <p class="jm-title">Sustainability Innovation Coach</p>
-        <p>Guides teams on impact strategy, practical implementation, and scalable green solutions.</p>
+        <p class="jm-summary">Impact strategy, practical delivery, and sustainability.</p>
       </article>
     </div>
   </div>
