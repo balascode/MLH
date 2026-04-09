@@ -36,7 +36,7 @@ seo:
 # Event information.
 event:
   name:        "Code Fest"
-  description: "This is Code Fest"
+  description: "Code Fest is a 12 hour in-person mini hackathon powered by Major League Hacking (MLH) and sponsored by Google's Gemini."
   date:        "28th April 2026"
   location:    "BTH, Karlskrona, Sweden"
 
