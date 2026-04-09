@@ -12,6 +12,29 @@ layout: default
   </div>
 </section>
 
+<section class="countdown">
+  <div class="container">
+    <div class="countdown-card text-center">
+      <p class="eyebrow">Time Until Code Fest</p>
+      <h2>April 28, 2026 at 8:00 AM (Stockholm)</h2>
+      <div class="countdown-grid" id="countdown-grid" aria-live="polite">
+        <div class="countdown-item">
+          <span class="countdown-value" id="countdown-days">--</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="countdown-hours">--</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="countdown-minutes">--</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="info">
   <div class="container">
     <div class="items row">
@@ -63,56 +86,50 @@ layout: default
       <p class="lead">A crisp run-of-show so everyone knows what is happening, when.</p>
     </div>
 
-    <div class="schedule-grid">
-      <div class="schedule-card">
-        <div class="schedule-time">8:00 AM</div>
-        <h3>Check-in + slides presentation</h3>
-        <p>Doors open, badges out, and a quick welcome deck to set the vibe.</p>
+    <div class="schedule-table" role="table" aria-label="Code Fest schedule">
+      <div class="schedule-row schedule-row--head" role="row">
+        <div class="schedule-cell schedule-cell--time" role="columnheader">Time</div>
+        <div class="schedule-cell" role="columnheader">What's Happening</div>
       </div>
-      <div class="schedule-card">
-        <div class="schedule-time">8:30 AM</div>
-        <h3>Problem statements announced</h3>
-        <p>We reveal the challenge tracks and what judges will be looking for.</p>
+      <div class="schedule-row" role="row">
+        <div class="schedule-cell schedule-cell--time" role="cell">8:00 AM</div>
+        <div class="schedule-cell" role="cell">Check-in + slides presentation</div>
       </div>
-      <div class="schedule-card">
-        <div class="schedule-time">8:40 - 9:15 AM</div>
-        <h3>Starter workshop</h3>
-        <p>A short, friendly walkthrough on how to get building fast.</p>
+      <div class="schedule-row" role="row">
+        <div class="schedule-cell schedule-cell--time" role="cell">8:30 AM</div>
+        <div class="schedule-cell" role="cell">Problem statements announced</div>
       </div>
-      <div class="schedule-card">
-        <div class="schedule-time">9:30 AM</div>
-        <h3>Food + brainstorming</h3>
-        <p>Grab bites and map your idea with your team.</p>
+      <div class="schedule-row" role="row">
+        <div class="schedule-cell schedule-cell--time" role="cell">8:40 - 9:15 AM</div>
+        <div class="schedule-cell" role="cell">Starter workshop</div>
       </div>
-      <div class="schedule-card">
-        <div class="schedule-time">10:30 AM</div>
-        <h3>Coding + mentor check-ins</h3>
-        <p>Build time starts. Mentors circulate to help unblock progress.</p>
+      <div class="schedule-row" role="row">
+        <div class="schedule-cell schedule-cell--time" role="cell">9:30 AM</div>
+        <div class="schedule-cell" role="cell">Food + brainstorming</div>
       </div>
-      <div class="schedule-card">
-        <div class="schedule-time">1:00 PM</div>
-        <h3>Judging round 1</h3>
-        <p>Quick progress reviews and feedback to sharpen your build.</p>
+      <div class="schedule-row" role="row">
+        <div class="schedule-cell schedule-cell--time" role="cell">10:30 AM</div>
+        <div class="schedule-cell" role="cell">Coding + mentor check-ins</div>
       </div>
-      <div class="schedule-card">
-        <div class="schedule-time">2:00 PM</div>
-        <h3>Coding + food</h3>
-        <p>Refuel and push your project toward a demo-ready state.</p>
+      <div class="schedule-row" role="row">
+        <div class="schedule-cell schedule-cell--time" role="cell">1:00 PM</div>
+        <div class="schedule-cell" role="cell">Judging round 1</div>
       </div>
-      <div class="schedule-card">
-        <div class="schedule-time">3:00 PM</div>
-        <h3>Mini games</h3>
-        <p>Quick breaks and fun to keep the energy high.</p>
+      <div class="schedule-row" role="row">
+        <div class="schedule-cell schedule-cell--time" role="cell">2:00 PM</div>
+        <div class="schedule-cell" role="cell">Coding + food</div>
       </div>
-      <div class="schedule-card">
-        <div class="schedule-time">6:30 PM</div>
-        <h3>Wrap up</h3>
-        <p>Final polish, get demos ready, and prep for the main stage.</p>
+      <div class="schedule-row" role="row">
+        <div class="schedule-cell schedule-cell--time" role="cell">3:00 PM</div>
+        <div class="schedule-cell" role="cell">Mini games</div>
       </div>
-      <div class="schedule-card">
-        <div class="schedule-time">8:00 PM</div>
-        <h3>Judging + awards</h3>
-        <p>Showcase time, final judging, and awards presented.</p>
+      <div class="schedule-row" role="row">
+        <div class="schedule-cell schedule-cell--time" role="cell">6:30 PM</div>
+        <div class="schedule-cell" role="cell">Wrap up</div>
+      </div>
+      <div class="schedule-row" role="row">
+        <div class="schedule-cell schedule-cell--time" role="cell">8:00 PM</div>
+        <div class="schedule-cell" role="cell">Judging + awards</div>
       </div>
     </div>
   </div>
