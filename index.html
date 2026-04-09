@@ -15,8 +15,9 @@ layout: default
 <section class="countdown">
   <div class="container">
     <div class="countdown-card text-center">
-      <p class="eyebrow">Time Until Code Fest</p>
-      <h2>April 28, 2026 at 8:00 AM (Stockholm)</h2>
+      <p class="eyebrow" id="countdown-status">Code Fest Starts In</p>
+      <h2><time datetime="2026-04-28T08:00:00+02:00">Tuesday, April 28, 2026</time></h2>
+      <p class="countdown-meta">8:00 AM Stockholm time at BTH, Karlskrona</p>
       <div class="countdown-grid" id="countdown-grid" aria-live="polite">
         <div class="countdown-item">
           <span class="countdown-value" id="countdown-days">--</span>
@@ -86,72 +87,80 @@ layout: default
       <p class="lead">A crisp run-of-show so everyone knows what is happening, when.</p>
     </div>
 
-    <div class="schedule-table" role="table" aria-label="Code Fest schedule">
-      <div class="schedule-row schedule-row--head" role="row">
-        <div class="schedule-cell schedule-cell--time" role="columnheader">Time</div>
-        <div class="schedule-cell" role="columnheader">What's Happening</div>
-      </div>
-      <div class="schedule-row" role="row">
-        <div class="schedule-cell schedule-cell--time" role="cell">8:00 AM</div>
-        <div class="schedule-cell" role="cell">Check-in + slides presentation</div>
-      </div>
-      <div class="schedule-row" role="row">
-        <div class="schedule-cell schedule-cell--time" role="cell">8:30 AM</div>
-        <div class="schedule-cell" role="cell">Problem statements announced</div>
-      </div>
-      <div class="schedule-row" role="row">
-        <div class="schedule-cell schedule-cell--time" role="cell">8:40 - 9:15 AM</div>
-        <div class="schedule-cell" role="cell">Starter workshop</div>
-      </div>
-      <div class="schedule-row" role="row">
-        <div class="schedule-cell schedule-cell--time" role="cell">9:30 AM</div>
-        <div class="schedule-cell" role="cell">Food + brainstorming</div>
-      </div>
-      <div class="schedule-row" role="row">
-        <div class="schedule-cell schedule-cell--time" role="cell">10:30 AM</div>
-        <div class="schedule-cell" role="cell">Coding + mentor check-ins</div>
-      </div>
-      <div class="schedule-row" role="row">
-        <div class="schedule-cell schedule-cell--time" role="cell">1:00 PM</div>
-        <div class="schedule-cell" role="cell">Judging round 1</div>
-      </div>
-      <div class="schedule-row" role="row">
-        <div class="schedule-cell schedule-cell--time" role="cell">2:00 PM</div>
-        <div class="schedule-cell" role="cell">Coding + food</div>
-      </div>
-      <div class="schedule-row" role="row">
-        <div class="schedule-cell schedule-cell--time" role="cell">3:00 PM</div>
-        <div class="schedule-cell" role="cell">Mini games</div>
-      </div>
-      <div class="schedule-row" role="row">
-        <div class="schedule-cell schedule-cell--time" role="cell">6:30 PM</div>
-        <div class="schedule-cell" role="cell">Wrap up</div>
-      </div>
-      <div class="schedule-row" role="row">
-        <div class="schedule-cell schedule-cell--time" role="cell">8:00 PM</div>
-        <div class="schedule-cell" role="cell">Judging + awards</div>
-      </div>
+    <div class="schedule-shell">
+      <table class="schedule-table" aria-label="Code Fest schedule">
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8:00 AM</td>
+            <td>Check-in + slides presentation</td>
+          </tr>
+          <tr>
+            <td>8:30 AM</td>
+            <td>Problem statements announced</td>
+          </tr>
+          <tr>
+            <td>8:40 - 9:15 AM</td>
+            <td>Starter workshop</td>
+          </tr>
+          <tr>
+            <td>9:30 AM</td>
+            <td>Food + brainstorming</td>
+          </tr>
+          <tr>
+            <td>10:30 AM</td>
+            <td>Coding + mentor check-ins</td>
+          </tr>
+          <tr>
+            <td>1:00 PM</td>
+            <td>Judging round 1</td>
+          </tr>
+          <tr>
+            <td>2:00 PM</td>
+            <td>Coding + food</td>
+          </tr>
+          <tr>
+            <td>3:00 PM</td>
+            <td>Mini games</td>
+          </tr>
+          <tr>
+            <td>6:30 PM</td>
+            <td>Wrap up</td>
+          </tr>
+          <tr>
+            <td>8:00 PM</td>
+            <td>Judging + awards</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
 <section class="faq">
   <div class="container">
-    <h1 class="text-center">FAQ</h1>
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        {% for item in site.event.faq %}
-        <details class="question col-xs-12 col-sm-12">
-          <summary>
-            <span class="faq-question">{{ item.question }}</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            {{ item.answer | markdownify }}
-          </div>
-        </details>
-        {% endfor %}
-      </div>
+    <div class="faq-intro text-center">
+      <p class="eyebrow">Quick Answers</p>
+      <h1>FAQ</h1>
+      <p class="lead">Everything most people ask, in a tighter format.</p>
+    </div>
+    <div class="faq-list">
+      {% for item in site.event.faq %}
+      <details class="question">
+        <summary>
+          <span class="faq-question">{{ item.question }}</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          {{ item.answer | markdownify }}
+        </div>
+      </details>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -159,59 +168,51 @@ layout: default
 <section class="partners">
   <div class="container">
     <div class="partners-intro text-center">
-      <p class="eyebrow">Community</p>
-      <h1>Our Organizers &amp; Sponsors</h1>
-      <p class="lead">The people and partners powering the hackathon experience.</p>
+      <p class="eyebrow">Community + Sponsors</p>
+      <h1>Powered By Our People</h1>
+      <p class="lead">The organizers and partners making Code Fest possible, all in one place.</p>
     </div>
 
-    <div class="partners-group">
-      <div class="partners-group-header">
-        <h2>Our Organizers</h2>
-        <p>Local leaders building the hackathon journey.</p>
-      </div>
-      <div class="partners-grid">
-        <div class="partner-card">
-          <div class="partner-badge">Organizer</div>
-          <div class="partner-logo">
-            <a href="https://root.bthstudent.se">
-              <img src="images/image4.jpeg" alt="#Root" />
-            </a>
-          </div>
-          <h3>#Root</h3>
+    <div class="partners-grid partners-grid--compact">
+      <article class="partner-card">
+        <div class="partner-badge">Organizer</div>
+        <div class="partner-logo">
+          <a href="https://root.bthstudent.se">
+            <img src="images/image4.jpeg" alt="#Root" />
+          </a>
         </div>
-        <div class="partner-card">
-          <div class="partner-badge">Organizer</div>
-          <div class="partner-logo">
-              <a href="https://bits.bthstudent.se">
-                <img src="images/image5.jpeg" alt="BITS" />
-              </a>
-          </div>
-          <h3>BITS</h3>
-        </div>
-      </div>
-    </div>
+        <h3>#Root</h3>
+        <p class="partner-note">Student organizer</p>
+      </article>
 
-    <div class="partners-group">
-      <div class="partners-group-header">
-        <h2>Our Sponsors</h2>
-        <p>Partners powering prizes, mentorship, and the overall experience.</p>
-      </div>
-      <div class="partners-grid">
-        <div class="partner-card">
-          <div class="partner-badge">Sponsor</div>
-          <div class="partner-logo">
-            <img src="images/image6.png" alt="MLH" />
-          </div>
-          <h3>MLH</h3>
+      <article class="partner-card">
+        <div class="partner-badge">Organizer</div>
+        <div class="partner-logo">
+          <a href="https://bits.bthstudent.se">
+            <img src="images/image5.jpeg" alt="BITS" />
+          </a>
         </div>
-        <div class="partner-card">
-          <div class="partner-badge">Sponsor</div>
-          <div class="partner-logo">
-            <img src="images/image7.png" alt="Gemini" />
-          </div>
-          <h3>Gemini</h3>
+        <h3>BITS</h3>
+        <p class="partner-note">Student organizer</p>
+      </article>
+
+      <article class="partner-card">
+        <div class="partner-badge">Sponsor</div>
+        <div class="partner-logo">
+          <img src="images/image6.png" alt="MLH" />
         </div>
-      </div>
+        <h3>MLH</h3>
+        <p class="partner-note">League partner</p>
+      </article>
+
+      <article class="partner-card">
+        <div class="partner-badge">Sponsor</div>
+        <div class="partner-logo">
+          <img src="images/image7.png" alt="Gemini" />
+        </div>
+        <h3>Gemini</h3>
+        <p class="partner-note">Prize sponsor</p>
+      </article>
     </div>
   </div>
 </section>

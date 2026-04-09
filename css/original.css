@@ -235,6 +235,19 @@ a {
   color: var(--forest);
 }
 
+.countdown-card time {
+  color: inherit;
+  font-style: normal;
+}
+
+.countdown-meta {
+  margin: -2px 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: rgba(15, 45, 32, 0.7);
+}
+
 .countdown-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -254,6 +267,7 @@ a {
   line-height: 1;
   font-weight: 700;
   color: var(--forest);
+  font-variant-numeric: tabular-nums;
 }
 
 .countdown-label {
@@ -361,7 +375,7 @@ a {
   color: var(--pine);
 }
 
-.schedule-table {
+.schedule-shell {
   border: 1px solid var(--border);
   border-radius: 18px;
   overflow: hidden;
@@ -369,37 +383,45 @@ a {
   box-shadow: 0 18px 38px rgba(10, 30, 20, 0.1);
 }
 
-.schedule-row {
-  display: grid;
-  grid-template-columns: 200px 1fr;
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
-.schedule-row + .schedule-row {
-  border-top: 1px solid rgba(15, 45, 32, 0.12);
-}
-
-.schedule-row--head {
+.schedule-table thead th {
   background: rgba(15, 45, 32, 0.08);
   font-weight: 700;
-}
-
-.schedule-cell {
-  padding: 10px 14px;
-  font-size: 15px;
-  line-height: 1.35em;
-  color: var(--pine);
-}
-
-.schedule-row--head .schedule-cell {
   color: var(--forest);
   letter-spacing: 0.2px;
 }
 
-.schedule-cell--time {
+.schedule-table tbody tr + tr td {
+  border-top: 1px solid rgba(15, 45, 32, 0.12);
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 10px 14px;
+  font-size: 15px;
+  line-height: 1.35em;
+  color: var(--pine);
+  text-align: left;
+  vertical-align: top;
+}
+
+.schedule-table th:first-child,
+.schedule-table td:first-child {
+  width: 190px;
   color: var(--leaf);
   font-weight: 700;
   border-right: 1px solid rgba(15, 45, 32, 0.12);
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.schedule-table thead th:first-child {
+  color: var(--forest);
 }
 
 .schedule-card {
@@ -957,17 +979,21 @@ a {
   gap: 14px;
 }
 
+.partners-grid--compact {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .partner-card {
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 22px;
-  padding: 18px;
-  min-height: 168px;
+  padding: 16px 16px 14px;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   text-align: center;
   box-shadow: 0 18px 38px rgba(10, 30, 20, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -1001,6 +1027,13 @@ a {
   background: linear-gradient(160deg, rgba(15, 45, 32, 0.06), rgba(47, 143, 98, 0.1));
 }
 
+.partner-logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .partner-logo img {
   max-height: 46px;
   max-width: 130px;
@@ -1013,6 +1046,13 @@ a {
   font-size: 17px;
   margin: 0;
   color: var(--forest);
+}
+
+.partner-note {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(15, 45, 32, 0.62);
 }
 
 /*
@@ -1033,13 +1073,39 @@ a {
   color: var(--forest);
 }
 
+.faq-intro {
+  max-width: 680px;
+  margin: 0 auto 22px;
+}
+
+.faq .eyebrow {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: var(--leaf);
+  margin-bottom: 12px;
+}
+
+.faq-intro .lead {
+  font-size: 18px;
+  color: var(--pine);
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
 .faq .question {
-  padding: 14px 14px 12px;
-  margin-bottom: 10px;
+  padding: 12px 14px;
+  margin: 0;
   background: #ffffff;
-  border-radius: 18px;
+  border-radius: 16px;
   border: 1px solid var(--border);
-  box-shadow: 0 18px 36px rgba(10, 30, 20, 0.1);
+  box-shadow: 0 12px 28px rgba(10, 30, 20, 0.08);
   animation: fade-up 0.9s ease both;
   color: #0f2d20;
   color: var(--forest);
@@ -1053,8 +1119,7 @@ a {
   gap: 10px;
   cursor: pointer;
   list-style: none;
-  padding-bottom: 10px;
-  border-bottom: 3px solid var(--leaf);
+  padding-bottom: 0;
   color: #0f2d20;
   color: var(--forest);
   opacity: 1;
@@ -1075,10 +1140,10 @@ a {
   display: block;
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   color: #0f2d20;
   color: var(--forest);
-  line-height: 1.4em;
+  line-height: 1.35em;
   opacity: 1;
   visibility: visible;
 }
@@ -1114,7 +1179,7 @@ a {
 
 .faq .question[open] {
   border-color: rgba(47, 143, 98, 0.38);
-  box-shadow: 0 20px 42px rgba(10, 30, 20, 0.14);
+  box-shadow: 0 16px 34px rgba(10, 30, 20, 0.12);
 }
 
 .faq .question[open] .faq-icon {
@@ -1129,12 +1194,19 @@ a {
 
 .faq .faq-answer {
   margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(15, 45, 32, 0.1);
 }
 
 .faq .faq-answer p {
+  margin: 0;
   font-size: 15px;
   line-height: 1.5em;
   color: var(--pine);
+}
+
+.faq .faq-answer p + p {
+  margin-top: 8px;
 }
 
 /*
@@ -1350,6 +1422,10 @@ a {
     font-size: 26px;
   }
 
+  .countdown-meta {
+    font-size: 13px;
+  }
+
   .info {
     padding: 95px 0;
   }
@@ -1450,13 +1526,15 @@ a {
     font-size: 36px;
   }
 
-  .schedule-row {
-    grid-template-columns: 132px 1fr;
-  }
-
-  .schedule-cell {
+  .schedule-table th,
+  .schedule-table td {
     padding: 9px 10px;
     font-size: 14px;
+  }
+
+  .schedule-table th:first-child,
+  .schedule-table td:first-child {
+    width: 132px;
   }
 
   .themes {
@@ -1495,7 +1573,8 @@ a {
     font-size: 34px;
   }
 
-  .partners-grid {
+  .partners-grid,
+  .partners-grid--compact {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
@@ -1535,9 +1614,17 @@ a {
     font-size: 32px;
   }
 
+  .faq-intro .lead {
+    font-size: 16px;
+  }
+
+  .faq-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
   .faq .question {
-    padding: 12px 12px 10px;
-    margin-bottom: 8px;
+    padding: 11px 12px;
   }
 
   .faq .question .faq-question {
@@ -1596,6 +1683,11 @@ a {
     font-size: 18px;
   }
 
+  .countdown-meta {
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+
   .countdown-item {
     padding: 9px 6px;
   }
@@ -1616,13 +1708,15 @@ a {
     padding: 80px 0 90px;
   }
 
-  .schedule-row {
-    grid-template-columns: 104px 1fr;
-  }
-
-  .schedule-cell {
+  .schedule-table th,
+  .schedule-table td {
     padding: 8px 8px;
     font-size: 13px;
+  }
+
+  .schedule-table th:first-child,
+  .schedule-table td:first-child {
+    width: 104px;
   }
 
   .themes {
@@ -1700,8 +1794,7 @@ a {
   }
 
   .faq .question {
-    padding: 10px 10px 8px;
-    margin-bottom: 7px;
+    padding: 10px;
   }
 
   .faq .question .faq-question {
@@ -1735,12 +1828,14 @@ a {
     font-size: 20px;
   }
 
-  .schedule-row {
-    grid-template-columns: 92px 1fr;
+  .schedule-table th,
+  .schedule-table td {
+    font-size: 12px;
   }
 
-  .schedule-cell {
-    font-size: 12px;
+  .schedule-table th:first-child,
+  .schedule-table td:first-child {
+    width: 92px;
   }
 
   .theme-card {
