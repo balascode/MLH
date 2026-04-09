@@ -48,13 +48,13 @@ event:
   hero:
     links:
       - text: "Apply"
-        href: "https://events.mlh.io/events/13975-codefest-at-bth"
+        href: "https://go.orbiapp.io/6oFcXvYPc2b"
       - text: "Sponsor"
         href: "https://forms.gle/dWx3o7dGG1uaEouU7"
 
   about:
     description: >
-      "Code Fest is a 12 hour in-person mini hackathon powered by Major League Hacking (MLH) and sponsored by Google's Gemini. It's open to all students at BTH, and it's a great opportunity to learn new skills, meet new people, and build cool projects. Whether you're a beginner or an experienced coder, there's something for everyone at Code Fest. We can't wait to see you there!"
+      Code Fest is a 12 hour in-person mini hackathon powered by Major League Hacking (MLH) and sponsored by Google's Gemini. It's open to all students at BTH, and it's a great opportunity to learn new skills, meet new people, and build cool projects. Whether you're a beginner or an experienced coder, there's something for everyone at Code Fest. We can't wait to see you there!
 
   # Frequently asked questions.
   faq:

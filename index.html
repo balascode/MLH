@@ -28,6 +28,33 @@ layout: default
   </div>
 </section>
 
+<section class="themes">
+  <div class="container">
+    <div class="themes-intro text-center">
+      <p class="eyebrow">Focus</p>
+      <h1>Hackathon Themes</h1>
+      <p class="lead">Choose a challenge track that sparks your imagination and build something bold.</p>
+    </div>
+
+    <div class="themes-grid">
+      <div class="theme-card theme-card--robotics">
+        <div class="theme-tag">Theme 01</div>
+        <h3>Machine Learning</h3>
+        <p>Build intelligent systems that learn and adapt.  </p>
+        <div class="theme-meta">Healthcare | Finance | Environmental</div>
+      </div>
+
+      <div class="theme-card theme-card--automation">
+        <div class="theme-tag">Theme 02</div>
+        <h3>Creative Innovation</h3>
+        <p>Explore new ways to express creativity through technology and design.</p>
+        <div class="theme-meta">Agents | Productivity | DevTools</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="schedule">
   <div class="container">
     <div class="schedule-intro text-center">
@@ -91,41 +118,93 @@ layout: default
   </div>
 </section>
 
-<section class="themes">
+<section class="faq">
   <div class="container">
-    <div class="themes-intro text-center">
-      <p class="eyebrow">Focus</p>
-      <h1>Hackathon Themes</h1>
-      <p class="lead">Choose a challenge track that sparks your team and build something bold.</p>
+    <h1 class="text-center">FAQ</h1>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        {% for item in site.event.faq %}
+        <details class="question col-xs-12 col-sm-12">
+          <summary>
+            <span class="faq-question">{{ item.question }}</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer">
+            {{ item.answer | markdownify }}
+          </div>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="container">
+    <div class="partners-intro text-center">
+      <p class="eyebrow">Community</p>
+      <h1>Our Community</h1>
+      <p class="lead">The organizers building the hackathon experience.</p>
     </div>
 
-    <div class="themes-grid">
-      <div class="theme-card theme-card--robotics">
-        <div class="theme-tag">Theme 01</div>
-        <h3>Robotics</h3>
-        <p>Autonomous helpers, smart hardware, and robots that move with purpose.</p>
-        <div class="theme-meta">Hardware | Sensors | Control</div>
+    <div class="partners-group">
+      <div class="partners-group-header">
+        <h2>Our Organizers</h2>
+        <p>Local leaders building the hackathon journey.</p>
       </div>
-
-      <div class="theme-card theme-card--culture">
-        <div class="theme-tag">Theme 02</div>
-        <h3>Art and Culture in Sweden</h3>
-        <p>Celebrate local heritage through digital storytelling, installations, and design.</p>
-        <div class="theme-meta">Heritage | Storytelling | Design</div>
+      <div class="partners-grid">
+        <div class="partner-card">
+          <div class="partner-badge">Organizer</div>
+          <div class="partner-logo">
+            <a href="https://root.bthstudent.se">
+              <img src="images/image4.jpeg" alt="#Root" />
+            </a>
+            <a href="https://bits.bthstudent.se">
+              <img src="images/image5.jpeg" alt="BITS" />
+            </a>
+          </div>
+          <h3>#Root</h3>
+        </div>
+        <div class="partner-card">
+          <div class="partner-badge">Organizer</div>
+          <div class="partner-logo">
+            <img src="images/image5.jpeg" alt="#Root" />
+          </div>
+          <h3>BITS</h3>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="theme-card theme-card--automation">
-        <div class="theme-tag">Theme 03</div>
-        <h3>AI Automation</h3>
-        <p>Build tools that streamline work, decisions, and everyday life with AI.</p>
-        <div class="theme-meta">Agents | Productivity | Workflow</div>
+<section class="partners sponsors">
+  <div class="container">
+    <div class="partners-intro text-center">
+      <p class="eyebrow">Sponsors</p>
+      <h1>Our Sponsors</h1>
+      <p class="lead">Trusted brands helping us deliver more for every hacker.</p>
+    </div>
+
+    <div class="partners-group">
+      <div class="partners-group-header">
+        <h2>Sponsor Partners</h2>
+        <p>Partners powering prizes, mentorship, and the overall experience.</p>
       </div>
-
-      <div class="theme-card theme-card--sustain">
-        <div class="theme-tag">Theme 04</div>
-        <h3>Sustainable Future</h3>
-        <p>Design solutions for energy, mobility, and climate-smart communities.</p>
-        <div class="theme-meta">Climate | Cities | Impact</div>
+      <div class="partners-grid">
+        <div class="partner-card">
+          <div class="partner-badge">Sponsor</div>
+          <div class="partner-logo">
+            <img src="images/image6.png" alt="MLH" />
+          </div>
+          <h3>MLH</h3>
+        </div>
+        <div class="partner-card">
+          <div class="partner-badge">Sponsor</div>
+          <div class="partner-logo">
+            <img src="images/image7.png" alt="Gemini" />
+          </div>
+          <h3>Gemini</h3>
+        </div>
       </div>
     </div>
   </div>
@@ -171,83 +250,6 @@ layout: default
         <p class="jm-title">Sustainability Innovation Coach</p>
         <p>Guides teams on impact strategy, practical implementation, and scalable green solutions.</p>
       </article>
-    </div>
-  </div>
-</section>
-
-<section class="partners">
-  <div class="container">
-    <div class="partners-intro text-center">
-      <p class="eyebrow">Community</p>
-      <h1>Our Organizers &amp; Sponsors</h1>
-      <p class="lead">The people and partners powering the experience.</p>
-    </div>
-
-    <div class="partners-group">
-      <div class="partners-group-header">
-        <h2>Our Organizers</h2>
-        <p>Local leaders building the hackathon journey.</p>
-      </div>
-      <div class="partners-grid">
-        <div class="partner-card">
-          <div class="partner-badge">Organizer</div>
-          <div class="partner-logo">
-            <img src="images/image4.jpeg" alt="#Root" />
-          </div>
-          <h3>#Root</h3>
-        </div>
-        <div class="partner-card">
-          <div class="partner-badge">Organizer</div>
-          <div class="partner-logo">
-            <img src="images/image5.jpeg" alt="#Root" />
-          </div>
-          <h3>BITS</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="partners-group">
-      <div class="partners-group-header">
-        <h2>Our Sponsors</h2>
-        <p>Trusted brands helping us deliver more for every hacker.</p>
-      </div>
-      <div class="partners-grid">
-        <div class="partner-card">
-          <div class="partner-badge">Sponsor</div>
-          <div class="partner-logo">
-            <img src="images/image6.png" alt="MLH" />
-          </div>
-          <h3>MLH</h3>
-        </div>
-        <div class="partner-card">
-          <div class="partner-badge">Sponsor</div>
-          <div class="partner-logo">
-            <img src="images/image7.png" alt="Gemini" />
-          </div>
-          <h3>Gemini</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="faq">
-  <div class="container">
-    <h1 class="text-center">FAQ</h1>
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        {% for item in site.event.faq %}
-        <details class="question col-xs-12 col-sm-12">
-          <summary>
-            <span class="faq-question">{{ item.question }}</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer">
-            {{ item.answer | markdownify }}
-          </div>
-        </details>
-        {% endfor %}
-      </div>
     </div>
   </div>
 </section>
