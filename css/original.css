@@ -200,6 +200,72 @@ a {
 }
 
 /*
+ * Countdown Section
+ */
+
+.countdown {
+  background: var(--mist);
+  color: var(--forest);
+  padding: 10px 0 70px;
+}
+
+.countdown-card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 18px 36px rgba(10, 30, 20, 0.1);
+  padding: 22px 24px;
+}
+
+.countdown .eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--leaf);
+  margin-bottom: 8px;
+}
+
+.countdown-card h2 {
+  margin: 0 0 14px;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  color: var(--forest);
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.countdown-item {
+  background: linear-gradient(160deg, rgba(15, 45, 32, 0.06), rgba(47, 143, 98, 0.12));
+  border: 1px solid rgba(15, 45, 32, 0.14);
+  border-radius: 14px;
+  padding: 12px 8px;
+}
+
+.countdown-value {
+  display: block;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--forest);
+}
+
+.countdown-label {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--pine);
+}
+
+/*
  * Info Section
  */
 
@@ -270,7 +336,7 @@ a {
 
 .schedule-intro {
   max-width: 680px;
-  margin: 0 auto 50px;
+  margin: 0 auto 28px;
 }
 
 .schedule .eyebrow {
@@ -295,10 +361,45 @@ a {
   color: var(--pine);
 }
 
-.schedule-grid {
+.schedule-table {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 38px rgba(10, 30, 20, 0.1);
+}
+
+.schedule-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: 200px 1fr;
+}
+
+.schedule-row + .schedule-row {
+  border-top: 1px solid rgba(15, 45, 32, 0.12);
+}
+
+.schedule-row--head {
+  background: rgba(15, 45, 32, 0.08);
+  font-weight: 700;
+}
+
+.schedule-cell {
+  padding: 10px 14px;
+  font-size: 15px;
+  line-height: 1.35em;
+  color: var(--pine);
+}
+
+.schedule-row--head .schedule-cell {
+  color: var(--forest);
+  letter-spacing: 0.2px;
+}
+
+.schedule-cell--time {
+  color: var(--leaf);
+  font-weight: 700;
+  border-right: 1px solid rgba(15, 45, 32, 0.12);
+  white-space: nowrap;
 }
 
 .schedule-card {
@@ -928,13 +1029,13 @@ a {
 .faq h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  margin: 20px 0 40px;
+  margin: 12px 0 22px;
   color: var(--forest);
 }
 
 .faq .question {
-  padding: 24px 24px 18px;
-  margin-bottom: 18px;
+  padding: 14px 14px 12px;
+  margin-bottom: 10px;
   background: #ffffff;
   border-radius: 18px;
   border: 1px solid var(--border);
@@ -949,11 +1050,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 10px;
   cursor: pointer;
   list-style: none;
-  padding-bottom: 14px;
-  border-bottom: 4px solid var(--leaf);
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--leaf);
   color: #0f2d20;
   color: var(--forest);
   opacity: 1;
@@ -974,7 +1075,7 @@ a {
   display: block;
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
   color: #0f2d20;
   color: var(--forest);
   line-height: 1.4em;
@@ -983,8 +1084,8 @@ a {
 }
 
 .faq .faq-icon {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   border: 2px solid rgba(15, 45, 32, 0.25);
   background: rgba(47, 143, 98, 0.08);
@@ -1027,12 +1128,12 @@ a {
 }
 
 .faq .faq-answer {
-  margin-top: 22px;
+  margin-top: 10px;
 }
 
 .faq .faq-answer p {
-  font-size: 17px;
-  line-height: 1.7em;
+  font-size: 15px;
+  line-height: 1.5em;
   color: var(--pine);
 }
 
