@@ -1,17 +1,51 @@
 <section class="hero">
-  <div class="wrapper text-center">
-    <h1 rel="title">{{ site.event.name }}</h1>
-    <h2 rel="description">{{ site.event.description }}</h2>
-    <h3 rel="location">{{ site.event.date }} &mdash; {{ site.event.location }}</h3>
-    <hr>
-    <div class="buttons">
-      {% for link in site.event.hero.links %}
-        {% if link.href %}
-          <a href="{{ link.href }}">{{ link.text }}</a>
-        {% elsif link.my_mlh %}
-          <a class="apply" href="https://my.mlh.io/oauth/authorize?client_id={{ link.my_mlh.client_id }}&amp;redirect_uri={{ link.my_mlh.redirect_uri }}&amp;response_type=token">{{ link.text }}</a>
-        {% endif %}
-      {% endfor %}
+  <div class="container hero-shell">
+    <div class="hero-copy">
+      <p class="hero-kicker">MLH Member Event</p>
+      <h1 rel="title">{{ site.event.name }}</h1>
+      <h2 rel="description">{{ site.event.description }}</h2>
+      <div class="hero-meta" aria-label="Event details">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Date</span>
+          <span>{{ site.event.date }}</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Location</span>
+          <span>{{ site.event.location }}</span>
+        </div>
+      </div>
+      <div class="buttons">
+        {% for link in site.event.hero.links %}
+          {% if link.href %}
+            <a href="{{ link.href }}">{{ link.text }}</a>
+          {% elsif link.my_mlh %}
+            <a class="apply" href="https://my.mlh.io/oauth/authorize?client_id={{ link.my_mlh.client_id }}&amp;redirect_uri={{ link.my_mlh.redirect_uri }}&amp;response_type=token">{{ link.text }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
+
+    <aside class="hero-panel" aria-label="Event highlights">
+      <p class="hero-panel-eyebrow">Why Join</p>
+      <div class="hero-panel-grid">
+        <div class="hero-stat">
+          <span class="hero-stat-value">12h</span>
+          <span class="hero-stat-label">Build Sprint</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">Free</span>
+          <span class="hero-stat-label">Food + Swag</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">Open</span>
+          <span class="hero-stat-label">To BTH</span>
+        </div>
+      </div>
+      <div class="hero-notes">
+        <div class="hero-note">Beginner-friendly workshops to help you get started fast.</div>
+        <div class="hero-note">Mentors and judges around all day to unblock your team.</div>
+        <div class="hero-note">Computer labs available if you do not have a laptop.</div>
+      </div>
+    </aside>
   </div>
 </section>

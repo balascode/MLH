@@ -72,70 +72,117 @@ a {
  */
 
 .hero {
-  min-height: 110vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 0 80px;
+  padding: 124px 0 68px;
 }
 
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(600px 300px at 80% 20%, rgba(47, 143, 98, 0.35), rgba(15, 45, 32, 0) 70%);
+  background: radial-gradient(640px 320px at 78% 18%, rgba(47, 143, 98, 0.34), rgba(15, 45, 32, 0) 70%),
+    radial-gradient(520px 260px at 12% 12%, rgba(255, 255, 255, 0.08), rgba(15, 45, 32, 0) 72%);
   pointer-events: none;
 }
 
-.hero .wrapper {
-  padding-top: 22vh;
-  max-width: 960px;
+.hero::after {
+  content: '';
+  position: absolute;
+  right: -80px;
+  bottom: 24px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(47, 143, 98, 0.22), rgba(47, 143, 98, 0));
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.hero-shell {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  align-items: end;
   animation: rise-in 1s ease-out;
 }
 
-.hero .wrapper h1 {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 999px;
-  display: inline-block;
-  font-family: 'Playfair Display', serif;
-  font-size: 64px;
-  font-weight: 700;
-  letter-spacing: -1.5px;
-  padding: 14px 36px;
-  box-shadow: var(--glow);
+.hero-copy {
+  max-width: 720px;
 }
 
-.hero .wrapper h2 {
-  font-size: 28px;
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 78px;
+  font-weight: 700;
+  letter-spacing: -2.4px;
+  line-height: 0.95;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 20px 40px rgba(3, 14, 9, 0.28);
+}
+
+.hero h2 {
+  max-width: 38rem;
+  font-size: 24px;
   font-weight: 500;
-  margin-top: 22px;
+  line-height: 1.5;
+  margin: 18px 0 0;
   color: rgba(255, 255, 255, 0.88);
 }
 
-.hero .wrapper h3 {
-  font-size: 18px;
-  font-weight: 500;
-  padding-bottom: 30px;
-  color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 520px;
+  margin-top: 24px;
 }
 
-.hero hr {
-  border-top: 6px solid var(--leaf);
-  margin: 20px auto 0;
-  position: relative;
-  width: 120px;
-  border-radius: 999px;
+.hero-meta-item {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 14px 34px rgba(4, 15, 10, 0.18);
+}
+
+.hero-meta-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(210, 243, 224, 0.76);
 }
 
 .hero .buttons {
-  margin: 36px 0 0;
+  margin: 26px 0 0;
   display: flex;
-  justify-content: center;
-  gap: 16px;
+  justify-content: flex-start;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -147,13 +194,20 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 1px;
-  padding: 14px 44px;
+  letter-spacing: 0.9px;
+  padding: 13px 26px;
   text-transform: uppercase;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
   box-shadow: var(--shadow);
+}
+
+.hero .buttons a + a {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.94);
+  box-shadow: none;
 }
 
 .hero .buttons a:hover,
@@ -164,6 +218,81 @@ a {
   box-shadow: 0 16px 40px rgba(8, 26, 18, 0.35);
 }
 
+.hero-panel {
+  padding: 24px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 48px rgba(3, 14, 9, 0.25);
+}
+
+.hero-panel-eyebrow {
+  margin: 0 0 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(210, 243, 224, 0.82);
+}
+
+.hero-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.hero-stat {
+  padding: 14px 10px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.hero-stat-value {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero-stat-label {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-notes {
+  display: grid;
+  gap: 10px;
+}
+
+.hero-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.hero-note::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--leaf);
+  box-shadow: 0 0 0 6px rgba(47, 143, 98, 0.14);
+  flex-shrink: 0;
+}
+
 /* 
  * About Section
  */
@@ -171,7 +300,7 @@ a {
 .about {
   background: var(--mist);
   color: var(--forest);
-  padding: 130px 0;
+  padding: 92px 0;
   position: relative;
 }
 
@@ -189,8 +318,8 @@ a {
 
 .about p {
   color: var(--pine);
-  font-size: 20px;
-  line-height: 1.8em;
+  font-size: 18px;
+  line-height: 1.72em;
   letter-spacing: -0.2px;
 }
 
@@ -206,7 +335,7 @@ a {
 .countdown {
   background: var(--mist);
   color: var(--forest);
-  padding: 10px 0 70px;
+  padding: 4px 0 58px;
 }
 
 .countdown-card {
@@ -214,9 +343,9 @@ a {
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.88);
   border: 1px solid var(--border);
-  border-radius: 22px;
-  box-shadow: 0 18px 36px rgba(10, 30, 20, 0.1);
-  padding: 22px 24px;
+  border-radius: 20px;
+  box-shadow: 0 14px 30px rgba(10, 30, 20, 0.1);
+  padding: 20px 22px;
 }
 
 .countdown .eyebrow {
@@ -286,16 +415,16 @@ a {
 .info {
   background: var(--cloud);
   margin-top: 0;
-  padding: 110px 0;
+  padding: 86px 0;
   position: relative;
 }
 
 .info .item {
-  padding: 28px 24px;
-  border-radius: 24px;
+  padding: 22px 18px;
+  border-radius: 20px;
   background: rgba(15, 45, 32, 0.04);
   border: 1px solid var(--border);
-  box-shadow: 0 20px 40px rgba(10, 30, 20, 0.08);
+  box-shadow: 0 14px 30px rgba(10, 30, 20, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   animation: fade-up 0.8s ease both;
 }
@@ -308,19 +437,19 @@ a {
 
 .info .item h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 38px;
+  font-size: 32px;
   font-weight: 700;
-  margin: 20px 0 12px;
+  margin: 14px 0 10px;
   color: var(--forest);
 }
 
 .info .item img {
-  max-width: 220px;
+  max-width: 180px;
   filter: drop-shadow(0 12px 20px rgba(10, 30, 20, 0.12));
 }
 
 .info .item p {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--pine);
 }
 
@@ -331,7 +460,7 @@ a {
 .schedule {
   background: linear-gradient(140deg, #ffffff 0%, #f4fbf7 45%, #eaf6ef 100%);
   color: var(--forest);
-  padding: 120px 0 130px;
+  padding: 88px 0 94px;
   position: relative;
 }
 
@@ -350,7 +479,7 @@ a {
 
 .schedule-intro {
   max-width: 680px;
-  margin: 0 auto 28px;
+  margin: 0 auto 22px;
 }
 
 .schedule .eyebrow {
@@ -364,23 +493,23 @@ a {
 
 .schedule-intro h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 700;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   color: var(--forest);
 }
 
 .schedule-intro .lead {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--pine);
 }
 
 .schedule-shell {
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 16px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 18px 38px rgba(10, 30, 20, 0.1);
+  box-shadow: 0 14px 32px rgba(10, 30, 20, 0.1);
 }
 
 .schedule-table {
@@ -402,8 +531,8 @@ a {
 
 .schedule-table th,
 .schedule-table td {
-  padding: 10px 14px;
-  font-size: 15px;
+  padding: 9px 12px;
+  font-size: 14px;
   line-height: 1.35em;
   color: var(--pine);
   text-align: left;
@@ -523,7 +652,7 @@ a {
 .themes {
   background: linear-gradient(150deg, #ffffff 0%, #f4fbf7 45%, #e7f4ed 100%);
   color: var(--forest);
-  padding: 120px 0 130px;
+  padding: 84px 0 90px;
   position: relative;
   overflow: hidden;
 }
@@ -556,7 +685,7 @@ a {
 
 .themes-intro {
   max-width: 700px;
-  margin: 0 auto 50px;
+  margin: 0 auto 28px;
 }
 
 .themes .eyebrow {
@@ -570,30 +699,30 @@ a {
 
 .themes-intro h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 700;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   color: var(--forest);
 }
 
 .themes-intro .lead {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--pine);
 }
 
 .themes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .theme-card {
   position: relative;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--border);
-  border-radius: 26px;
-  padding: 30px 28px 28px;
-  box-shadow: 0 22px 44px rgba(10, 30, 20, 0.12);
+  border-radius: 22px;
+  padding: 22px 20px 20px;
+  box-shadow: 0 16px 34px rgba(10, 30, 20, 0.1);
   overflow: hidden;
   animation: fade-up 0.9s ease both;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
@@ -643,21 +772,21 @@ a {
 }
 
 .theme-card h3 {
-  font-size: 22px;
-  margin: 16px 0 10px;
+  font-size: 20px;
+  margin: 12px 0 8px;
   color: var(--forest);
 }
 
 .theme-card p {
-  margin: 0 0 18px;
-  font-size: 16px;
-  line-height: 1.6em;
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.5em;
   color: var(--pine);
 }
 
 .theme-meta {
-  font-size: 12px;
-  letter-spacing: 1.2px;
+  font-size: 11px;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
   font-weight: 700;
   color: rgba(15, 45, 32, 0.6);
@@ -710,7 +839,7 @@ a {
 .judges-mentors {
   background: linear-gradient(140deg, #eef8f2 0%, #ffffff 48%, #f5fbf8 100%);
   color: var(--forest);
-  padding: 120px 0 130px;
+  padding: 84px 0 90px;
   position: relative;
   overflow: hidden;
 }
@@ -742,7 +871,7 @@ a {
 
 .judges-intro {
   max-width: 700px;
-  margin: 0 auto 50px;
+  margin: 0 auto 28px;
 }
 
 .judges-mentors .eyebrow {
@@ -756,30 +885,30 @@ a {
 
 .judges-intro h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 700;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   color: var(--forest);
 }
 
 .judges-intro .lead {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--pine);
 }
 
 .judges-mentors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .jm-card {
   position: relative;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--border);
-  border-radius: 26px;
-  padding: 30px 26px 26px;
-  box-shadow: 0 22px 44px rgba(10, 30, 20, 0.12);
+  border-radius: 22px;
+  padding: 22px 20px 20px;
+  box-shadow: 0 16px 34px rgba(10, 30, 20, 0.1);
   overflow: hidden;
   animation: fade-up 0.9s ease both;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
@@ -830,14 +959,14 @@ a {
 }
 
 .jm-avatar {
-  width: 68px;
-  height: 68px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 16px 0 14px;
-  font-size: 20px;
+  margin: 14px 0 12px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.8px;
   color: #ffffff;
@@ -848,13 +977,13 @@ a {
 
 .jm-card h3 {
   margin: 0 0 6px;
-  font-size: 22px;
+  font-size: 20px;
   color: var(--forest);
 }
 
 .jm-title {
-  margin: 0 0 12px;
-  font-size: 13px;
+  margin: 0 0 10px;
+  font-size: 12px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   font-weight: 700;
@@ -863,8 +992,8 @@ a {
 
 .jm-card p {
   margin: 0;
-  font-size: 16px;
-  line-height: 1.6em;
+  font-size: 15px;
+  line-height: 1.5em;
   color: var(--pine);
 }
 
@@ -907,7 +1036,7 @@ a {
 .partners {
   background: linear-gradient(130deg, #f7fcf9 0%, #ffffff 55%, #f1f8f4 100%);
   color: var(--forest);
-  padding: 120px 0 130px;
+  padding: 80px 0 86px;
   position: relative;
 }
 
@@ -926,7 +1055,7 @@ a {
 
 .partners-intro {
   max-width: 680px;
-  margin: 0 auto 50px;
+  margin: 0 auto 32px;
 }
 
 .partners .eyebrow {
@@ -940,14 +1069,14 @@ a {
 
 .partners-intro h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 700;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   color: var(--forest);
 }
 
 .partners-intro .lead {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--pine);
 }
 
@@ -976,7 +1105,7 @@ a {
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
 .partners-grid--compact {
@@ -986,8 +1115,8 @@ a {
 .partner-card {
   background: #ffffff;
   border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: 16px 16px 14px;
+  border-radius: 18px;
+  padding: 14px 14px 12px;
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -995,7 +1124,7 @@ a {
   align-items: center;
   gap: 8px;
   text-align: center;
-  box-shadow: 0 18px 38px rgba(10, 30, 20, 0.12);
+  box-shadow: 0 12px 28px rgba(10, 30, 20, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -1018,12 +1147,12 @@ a {
 
 .partner-logo {
   width: 100%;
-  min-height: 68px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px 10px;
-  border-radius: 16px;
+  border-radius: 14px;
   background: linear-gradient(160deg, rgba(15, 45, 32, 0.06), rgba(47, 143, 98, 0.1));
 }
 
@@ -1062,20 +1191,20 @@ a {
 .faq {
   background: var(--mist);
   margin-top: 0;
-  padding: 110px 0 130px;
+  padding: 80px 0 86px;
   position: relative;
 }
 
 .faq h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  margin: 12px 0 22px;
+  margin: 8px 0 16px;
   color: var(--forest);
 }
 
 .faq-intro {
   max-width: 680px;
-  margin: 0 auto 22px;
+  margin: 0 auto 18px;
 }
 
 .faq .eyebrow {
@@ -1088,24 +1217,24 @@ a {
 }
 
 .faq-intro .lead {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--pine);
 }
 
 .faq-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
   align-items: start;
 }
 
 .faq .question {
-  padding: 12px 14px;
+  padding: 11px 12px;
   margin: 0;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 14px;
   border: 1px solid var(--border);
-  box-shadow: 0 12px 28px rgba(10, 30, 20, 0.08);
+  box-shadow: 0 10px 22px rgba(10, 30, 20, 0.08);
   animation: fade-up 0.9s ease both;
   color: #0f2d20;
   color: var(--forest);
@@ -1140,7 +1269,7 @@ a {
   display: block;
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   color: #0f2d20;
   color: var(--forest);
   line-height: 1.35em;
@@ -1193,15 +1322,15 @@ a {
 }
 
 .faq .faq-answer {
-  margin-top: 10px;
-  padding-top: 10px;
+  margin-top: 8px;
+  padding-top: 8px;
   border-top: 1px solid rgba(15, 45, 32, 0.1);
 }
 
 .faq .faq-answer p {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.5em;
+  font-size: 14px;
+  line-height: 1.45em;
   color: var(--pine);
 }
 
@@ -1216,7 +1345,7 @@ a {
 .footer {
   background: linear-gradient(140deg, #0f2d20 0%, #122d22 50%, #0b1f16 100%);
   color: #f2f9f5;
-  padding: 70px 0 60px;
+  padding: 56px 0 48px;
   position: relative;
   overflow: hidden;
 }
@@ -1238,12 +1367,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 24px;
   background: rgba(11, 31, 22, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 26px;
-  padding: 32px 36px;
-  box-shadow: 0 20px 50px rgba(2, 10, 6, 0.45);
+  border-radius: 22px;
+  padding: 28px 30px;
+  box-shadow: 0 18px 42px rgba(2, 10, 6, 0.42);
   animation: rise-in 1s ease-out;
 }
 
@@ -1258,14 +1387,14 @@ a {
 
 .footer h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   margin: 0 0 8px;
 }
 
 .footer-lead {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(242, 249, 245, 0.75);
 }
 
@@ -1279,7 +1408,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 16px;
+  padding: 9px 14px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.08);
@@ -1394,32 +1523,56 @@ a {
 }
 
 @media(max-width: 992px) {
-  .hero .wrapper {
-    padding-top: 16vh;
-  }
-
-  .hero .wrapper h1 {
-    font-size: 48px;
-  }
-
-  .hero .wrapper h2 {
-    font-size: 24px;
-  }
-
   .hero {
-    min-height: 92vh;
+    min-height: auto;
+    padding: 110px 0 54px;
+  }
+
+  .hero-shell {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .hero-copy {
+    max-width: none;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-meta {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero .buttons {
+    justify-content: center;
+  }
+
+  .hero-panel {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px;
   }
 
   .about {
-    padding: 110px 0;
+    padding: 80px 0;
   }
 
   .countdown {
-    padding: 0 0 56px;
+    padding: 0 0 48px;
   }
 
   .countdown-card h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .countdown-meta {
@@ -1427,71 +1580,89 @@ a {
   }
 
   .info {
-    padding: 95px 0;
+    padding: 72px 0;
   }
 
   .schedule {
-    padding: 105px 0 115px;
+    padding: 76px 0 82px;
   }
 
   .themes {
-    padding: 105px 0 115px;
+    padding: 72px 0 78px;
   }
 
   .judges-mentors {
-    padding: 105px 0 115px;
+    padding: 72px 0 78px;
   }
 
   .partners {
-    padding: 100px 0 110px;
+    padding: 68px 0 74px;
   }
 
   .faq {
-    padding: 96px 0 104px;
+    padding: 64px 0 70px;
   }
 }
 
 @media(max-width: 768px) {
-  .hero .wrapper h1 {
-    font-size: 36px;
-  }
-
-  .hero .wrapper h2 {
-    font-size: 20px;
-  }
-
-  .hero .wrapper h3 {
-    font-size: 14px;
-  }
-
   .hero {
-    min-height: 88vh;
+    padding: 96px 0 46px;
   }
 
-  .hero .buttons a {
-    font-size: 15px;
-    padding: 12px 28px;
+  .hero h1 {
+    font-size: 44px;
   }
 
-  .about {
-    padding: 95px 0;
-  }
-
-  .about p {
+  .hero h2 {
     font-size: 18px;
   }
 
+  .hero-meta {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .hero .buttons a {
+    font-size: 14px;
+    padding: 11px 22px;
+  }
+
+  .hero-panel {
+    padding: 18px;
+  }
+
+  .hero-stat {
+    padding: 12px 8px;
+  }
+
+  .hero-stat-value {
+    font-size: 22px;
+  }
+
+  .hero-note {
+    font-size: 13px;
+  }
+
+  .about {
+    padding: 66px 0;
+  }
+
+  .about p {
+    font-size: 17px;
+  }
+
   .countdown {
-    padding: 0 0 48px;
+    padding: 0 0 38px;
   }
 
   .countdown-card {
-    padding: 18px 14px;
+    padding: 16px 14px;
   }
 
   .countdown-card h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 8px;
   }
 
   .countdown-grid {
@@ -1502,67 +1673,92 @@ a {
     font-size: 28px;
   }
 
+  .info {
+    padding: 60px 0;
+  }
+
   .info .item {
     margin-bottom: 16px;
   }
 
   .info .item h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .info .item p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .info .item img {
-    max-width: 180px;
+    max-width: 150px;
   }
 
   .schedule {
-    padding: 90px 0 100px;
+    padding: 64px 0 70px;
   }
 
   .schedule-intro h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .schedule-table th,
   .schedule-table td {
-    padding: 9px 10px;
-    font-size: 14px;
+    padding: 8px 10px;
+    font-size: 13px;
   }
 
   .schedule-table th:first-child,
   .schedule-table td:first-child {
-    width: 132px;
+    width: 120px;
   }
 
   .themes {
-    padding: 90px 0 100px;
+    padding: 60px 0 66px;
   }
 
   .themes-intro h1 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .themes-grid {
     grid-template-columns: 1fr;
   }
 
+  .theme-card {
+    padding: 20px 18px 18px;
+  }
+
+  .theme-card p {
+    font-size: 14px;
+  }
+
   .judges-mentors {
-    padding: 90px 0 100px;
+    padding: 60px 0 66px;
   }
 
   .judges-intro h1 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .judges-mentors-grid {
     grid-template-columns: 1fr;
   }
 
+  .jm-card {
+    padding: 20px 18px 18px;
+  }
+
+  .jm-avatar {
+    width: 56px;
+    height: 56px;
+  }
+
+  .jm-card p {
+    font-size: 14px;
+  }
+
   .partners {
-    padding: 90px 0 100px;
+    padding: 56px 0 62px;
   }
 
   .partners-group {
@@ -1570,18 +1766,17 @@ a {
   }
 
   .partners-intro h1 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .partners-grid,
   .partners-grid--compact {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    gap: 8px;
   }
 
   .partner-card {
-    min-height: 145px;
-    padding: 14px 10px;
+    padding: 12px 10px;
   }
 
   .partners-group-header h2 {
@@ -1594,12 +1789,12 @@ a {
   }
 
   .partner-logo {
-    min-height: 56px;
+    min-height: 50px;
   }
 
   .partner-logo img {
-    max-height: 38px;
-    max-width: 105px;
+    max-height: 36px;
+    max-width: 100px;
   }
 
   .partner-card h3 {
@@ -1607,15 +1802,15 @@ a {
   }
 
   .faq {
-    padding: 84px 0 92px;
+    padding: 52px 0 58px;
   }
 
   .faq h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .faq-intro .lead {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .faq-list {
@@ -1624,24 +1819,25 @@ a {
   }
 
   .faq .question {
-    padding: 11px 12px;
+    padding: 10px 11px;
   }
 
   .faq .question .faq-question {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .faq .faq-answer p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .footer {
-    padding: 60px 0 50px;
+    padding: 48px 0 42px;
   }
 
   .footer-card {
     flex-direction: column;
     text-align: center;
+    padding: 22px 20px;
   }
 
   .footer-links {
@@ -1651,36 +1847,67 @@ a {
 }
 
 @media(max-width: 576px) {
-  .hero .wrapper {
-    padding-top: 14vh;
+  .hero {
+    padding: 86px 0 38px;
   }
 
-  .hero .wrapper h1 {
-    font-size: 30px;
-    padding: 10px 24px;
+  .hero h1 {
+    font-size: 36px;
   }
 
-  .hero .wrapper h2 {
-    font-size: 18px;
+  .hero h2 {
+    font-size: 16px;
+  }
+
+  .hero-kicker {
+    padding: 7px 12px;
+    font-size: 10px;
   }
 
   .hero .buttons a {
     width: 100%;
     max-width: 260px;
-    font-size: 14px;
-    padding: 10px 22px;
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+
+  .hero-panel {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .hero-panel-grid {
+    gap: 8px;
+  }
+
+  .hero-stat {
+    padding: 10px 6px;
+    border-radius: 14px;
+  }
+
+  .hero-stat-value {
+    font-size: 18px;
+  }
+
+  .hero-stat-label {
+    font-size: 9px;
+    letter-spacing: 0.9px;
+  }
+
+  .hero-note {
+    font-size: 13px;
   }
 
   .about {
-    padding: 85px 0;
+    padding: 58px 0;
   }
 
   .countdown {
-    padding: 0 0 38px;
+    padding: 0 0 30px;
   }
 
   .countdown-card h2 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .countdown-meta {
@@ -1701,58 +1928,58 @@ a {
   }
 
   .info {
-    padding: 80px 0;
+    padding: 52px 0;
   }
 
   .schedule {
-    padding: 80px 0 90px;
+    padding: 56px 0 60px;
   }
 
   .schedule-table th,
   .schedule-table td {
-    padding: 8px 8px;
-    font-size: 13px;
+    padding: 7px 8px;
+    font-size: 12px;
   }
 
   .schedule-table th:first-child,
   .schedule-table td:first-child {
-    width: 104px;
+    width: 96px;
   }
 
   .themes {
-    padding: 80px 0 90px;
+    padding: 52px 0 56px;
   }
 
   .judges-mentors {
-    padding: 80px 0 90px;
+    padding: 52px 0 56px;
   }
 
   .judges-intro h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .jm-card {
-    padding: 24px 22px;
+    padding: 18px 16px;
   }
 
   .jm-card p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .themes-intro h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .theme-card {
-    padding: 24px 22px;
+    padding: 18px 16px;
   }
 
   .theme-card p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .partners {
-    padding: 80px 0 90px;
+    padding: 48px 0 52px;
   }
 
   .partners-group {
@@ -1764,7 +1991,6 @@ a {
   }
 
   .partner-card {
-    min-height: 128px;
     padding: 12px 8px;
     gap: 8px;
   }
@@ -1790,11 +2016,11 @@ a {
   }
 
   .faq {
-    padding: 70px 0 80px;
+    padding: 44px 0 48px;
   }
 
   .faq .question {
-    padding: 10px;
+    padding: 9px 10px;
   }
 
   .faq .question .faq-question {
@@ -1807,21 +2033,21 @@ a {
   }
 
   .footer-card {
-    padding: 24px 22px;
+    padding: 20px 18px;
   }
 }
 
 @media(max-width: 420px) {
-  .hero .wrapper h1 {
-    font-size: 26px;
+  .hero h1 {
+    font-size: 30px;
   }
 
-  .hero .wrapper h2 {
-    font-size: 17px;
+  .hero h2 {
+    font-size: 15px;
   }
 
-  .hero .wrapper h3 {
-    font-size: 12px;
+  .hero-stat-value {
+    font-size: 16px;
   }
 
   .countdown-value {
@@ -1835,59 +2061,58 @@ a {
 
   .schedule-table th:first-child,
   .schedule-table td:first-child {
-    width: 92px;
+    width: 88px;
   }
 
   .theme-card {
-    padding: 22px 20px;
+    padding: 16px 15px;
   }
 
   .jm-card {
-    padding: 22px 20px;
+    padding: 16px 15px;
   }
 
   .jm-avatar {
-    width: 62px;
-    height: 62px;
-    font-size: 18px;
+    width: 52px;
+    height: 52px;
+    font-size: 16px;
   }
 
   .partner-card {
     padding: 10px 8px;
-    min-height: 120px;
   }
 }
 
 @media(min-width: 1200px) {
-  .hero .wrapper h1 {
-    font-size: 68px;
+  .hero h1 {
+    font-size: 84px;
   }
 
-  .hero .wrapper h2 {
-    font-size: 30px;
+  .hero h2 {
+    font-size: 26px;
   }
 
   .about p {
-    font-size: 22px;
+    font-size: 19px;
   }
 
   .info .item h1 {
-    font-size: 40px;
+    font-size: 34px;
   }
 
   .schedule-intro h1 {
-    font-size: 46px;
+    font-size: 42px;
   }
 
   .themes-intro h1 {
-    font-size: 46px;
+    font-size: 42px;
   }
 
   .judges-intro h1 {
-    font-size: 46px;
+    font-size: 42px;
   }
 
   .partners-intro h1 {
-    font-size: 48px;
+    font-size: 42px;
   }
 }
