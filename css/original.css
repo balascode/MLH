@@ -236,7 +236,7 @@ a {
 
 @media(min-width: 993px) {
   .hero-countdown {
-    margin-top: 48px;
+    margin-top: 56px;
   }
 }
 
@@ -1970,9 +1970,16 @@ a {
     font-size: 10px;
   }
 
+  .hero .buttons {
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
   .hero .buttons a {
-    width: 100%;
-    max-width: 260px;
+    width: auto;
+    max-width: none;
+    flex: 1 1 0;
+    min-width: 0;
     font-size: 13px;
     padding: 10px 18px;
   }
