@@ -110,7 +110,7 @@ event:
         Yes there is. We enforce it very strongly. You can [find it here](https://static.mlh.io/docs/mlh-code-of-conduct.pdf).
     - question: "What if I have other questions?"
       answer: >
-        No problem! You can reach out to us at codefest@student.bth.se and we'll be happy to answer any questions you have.
+        No problem! You can reach out to us at codefest@bthstudent.se and we'll be happy to answer any questions you have.
 
   # This is the message you'll receive once you've registered.
   register:
