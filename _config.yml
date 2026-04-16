@@ -49,8 +49,8 @@ event:
     links:
       - text: "Apply"
         href: "https://go.orbiapp.io/6oFcXvYPc2b"
-      - text: "Sponsor"
-        href: "https://forms.gle/dWx3o7dGG1uaEouU7"
+      - text: "Mentor signup"
+        href: "https://forms.office.com/e/bzVSWFgGiQ"
 
   about:
     description: >
@@ -79,7 +79,7 @@ event:
         Yes. You can use any open source code or libraries you want. We encourage you to use existing tools and resources to help you build your projects, as long as you build the project during the event.
     - question: "Do I need a team?"
       answer: >
-        No. You get the same prizes whether you attend solo or with a team. We will also have a team formation session at the beginning of the event to help you find teammates if you want.
+        No. You can participate individually or in teams it's up to you. We will also have a team formation session at the beginning of the event to help you find teammates if you want.
     - question: "What if I don't have any ideas?"
       answer: >
         No worries! We will have a brainstorming session at the beginning of the event to help you come up with ideas. We will also have mentors available throughout the event to help you refine your ideas and give you feedback.
@@ -91,16 +91,16 @@ event:
         That's why we're hosting the event in the computer labs! We will have computers available for you to use during the event, so you don't need to bring your own laptop if you don't have one.
     - question: "What if I have dietary restrictions?"
       answer: >
-        We will have a variety of food options available during the event, including vegetarian, vegan and gluten-free options. If you have any specific dietary restrictions, please let us know in advance so we can accommodate you.
+        We will have a variety of food options available during the event, including vegetarian, vegan and gluten-free options. You can also bring your own food :).
     - question: "What if I have accessibility needs?"
       answer: >
-        We want to make sure that everyone can attend and enjoy Code Fest. If you have any accessibility needs, please let us know in advance so we can accommodate you.
+        The venue is accessible and we will assist in any way we can. If you are worried you can contact us at codefest@bthstudent.se.
     - question: "Do I need to be a student to attend?"
       answer: >
         No. Anyone can attend, as long as they belong to BTH in some form, whether as students, alumni, staff or faculty.
     - question: "Where is the event?"
       answer: >
-        The event is being hosted at the computer labs in the H building at [BTH, Karlskrona] (https://maps.app.goo.gl/rQgfPUm4MoNRYhCB9) (Datorsalarna H320, H321, H322) The computer labs are located on the same floor as the library's upper floor. 
+        The event is being hosted at the computer labs in the H building at [BTH, Karlskrona] (https://maps.app.goo.gl/rQgfPUm4MoNRYhCB9) (Datorsalarna H320, H321, H322) The computer labs are located on the same floor as the library's upper floor.
     - question: "What is Major League Hacking?"
       answer: >
         Major League Hacking is [the official student hackathon league](https://mlh.io) in North America & Europe.
