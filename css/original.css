@@ -71,7 +71,7 @@ a {
   transform: translateY(-12px);
 }
 
-/* 
+/*
  * Hero Section
  */
 
@@ -296,7 +296,7 @@ a {
   transform: translateY(2px);
 }
 
-/* 
+/*
  * About Section
  */
 
@@ -311,9 +311,9 @@ a {
   content: '';
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0%;
   transform: translateX(-50%);
-  width: 160px;
+  width: 200%;
   height: 6px;
   background: linear-gradient(90deg, var(--leaf), transparent);
   border-radius: 999px;
