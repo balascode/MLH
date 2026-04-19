@@ -47,7 +47,9 @@ event:
 
   hero:
     links:
-      - text: "Apply"
+      - text: "Register (MLH)"
+        href: "httpsInformationents.mlh.io/events/13975-codefest-at-bth"
+      - text: "Information (Orbi)"
         href: "https://orbi.io/events/AUOUuNF8vUfrXgRZ"
       - text: "Mentor signup"
         href: "https://forms.office.com/e/bzVSWFgGiQ"
